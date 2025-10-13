@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open Front_Wallpaper.html",
-            "file": "c:\\Users\\godyvir\\Game Web\\Front_Wallpaper.html"
+            "file": "c:\\Users\\godyvir\\Game Web\\index.html"
             //"file": "Peripherals/test.html"
         }
     ]
