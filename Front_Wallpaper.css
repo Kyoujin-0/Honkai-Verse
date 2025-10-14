@@ -19,6 +19,16 @@ body {
   z-index: -1;
 }
 
+
+.Left-logo {
+  position: fixed;
+  left: 50px;
+  width: 110px;
+  height: auto;
+  top: 3px;
+  z-index: 100;
+}
+
 .logo {
   position: fixed;
   left: 50px;
