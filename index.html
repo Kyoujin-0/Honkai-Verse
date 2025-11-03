@@ -14,12 +14,13 @@
 
 </head>
 <link rel="stylesheet" href="Front_Wallpaper.css">
+<link rel="stylesheet" href="import_display.css">
 
 <body>
 
   <div id=" loading-screen"> <!--Background Video-->
     <video autoplay muted loop id="Background-Video">
-      <source src="Hi3 (01) Kiana/herrscher-of-flamescion-honkai-impact-3rd-moewalls-com.mp4" type="video/mp4">
+      <source src="HSR (01) Acheron/Acheron Honkai Star Rail.mp4" type="video/mp4">
     </video>
   </div>
 
@@ -100,7 +101,21 @@
     </ul>
   </div>
 
-
+  <div class="carousel" id="carousel">
+  <!-- Scroll Buttons -->
+  <button class="scroll-btn scroll-up" onclick="scrollCarousel(-1)">▲</button>
+  <div class="group">
+    <div class="carousel-card"><img src="https://picsum.photos/100?random=1"></div>
+    <div class="carousel-card"><img src="Icons/Acheron.webp"></div>
+    <div class="carousel-card"><img src="Icons/Kiana.jpg"></div>
+    <div class="carousel-card"><img src="https://picsum.photos/100?random=4"></div>
+    <div class="carousel-card"><img src="https://picsum.photos/100?random=5"></div>
+    <div class="carousel-card"><img src="https://picsum.photos/100?random=6"></div>
+    <div class="carousel-card"><img src="https://picsum.photos/100?random=7"></div>
+  </div>
+  <button class="scroll-btn scroll-down" onclick="scrollCarousel(1)">▼</button>
+</div>
+  
   <script src="Front_Wallpaper.js"></script>
 </body>
 

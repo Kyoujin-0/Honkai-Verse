@@ -1,0 +1,290 @@
+.card {
+  display: inline-flex;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  width: auto;
+  max-width: fit-content;
+  padding: 0;
+  margin: 0;
+}
+
+.card:hover {
+  animation: ease-out 5s;
+  background: transparent;
+}
+
+.card ul {
+  padding: 1rem;
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.card ul li {
+  cursor: pointer;
+}
+
+.svg {
+  transition: all 0.3s;
+  /* if you find some problems change w - h : 30px*/
+  padding: 1rem;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  color: rgb(255, 253, 253);
+  fill: currentColor;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
+}
+
+.text {
+  opacity: 0;
+  border-radius: 5px;
+  padding: 5px;
+  transition: all 0.3s;
+  color: rgb(193, 192, 192);
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  z-index: 99;
+  box-shadow: -5px 0 1px rgba(153, 153, 153, 0.2),
+    -10px 0 1px rgba(153, 153, 153, 0.2),
+    inset 0 0 20px rgba(255, 255, 255, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.082);
+}
+
+/*isometric prooyection*/
+.iso-pro {
+  transition: 0.5s;
+}
+
+.iso-pro:hover a>.svg {
+  transform: translate(19px, -10px);
+  border-radius: 100%;
+}
+
+.iso-pro:hover .text {
+  opacity: 1;
+  transform: translate(-10px, -2px) skew(-5deg);
+}
+
+.iso-pro:hover .svg {
+  transform: translate(5px, -5px);
+}
+
+.iso-pro span {
+  opacity: 0;
+  position: absolute;
+  color: #1877f2;
+  border-color: #1877f2;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
+  border-radius: 50%;
+  transition: all 0.3s;
+  height: 58px;
+  width: 58px;
+}
+
+.iso-pro:hover span {
+  opacity: 1;
+}
+
+.iso-pro:hover span:nth-child(1) {
+  opacity: 0.2;
+}
+
+.iso-pro:hover span:nth-child(2) {
+  opacity: 0.4;
+  transform: translate(5px, -5px);
+}
+
+.iso-pro:hover span:nth-child(3) {
+  opacity: 0.6;
+  transform: translate(10px, -10px);
+}
+
+
+/*Front Title
+#Front-Title,#Front-Title::after {
+  padding: 10px 50px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  color: #c6c6c6;
+  text-shadow: 0 0 10px cyan, 0 0 20px blue, 0 0 40px purple;
+  background-color: transparent;
+  position: absolute;
+  top: 570px;
+  left: 380px;
+  font-family: "Trade Winds", system-ui;
+  font-size: 60px;
+}
+
+#Front-Title::after {
+  --move1: inset(50% 50% 50% 50%);
+  --move2: inset(31% 0 40% 0);
+  --move3: inset(39% 0 15% 0);
+  --move4: inset(45% 0 40% 0);
+  --move5: inset(45% 0 6% 0);
+  --move6: inset(14% 0 61% 0);
+  clip-path: var(--move1);
+  content: 'As Thunder Fill The Sky';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+}
+#Front-Title:hover::after {
+  animation: glitch_4011 0.5s;
+  text-shadow: 10 10px 10px black;
+  animation-timing-function: steps(1, end);
+  background-color: transparent;
+  border: transparent;
+  color: #fff;
+  text-shadow: 0 0 10px rgb(255, 119, 0), 0 0 20px rgb(255, 0, 0), 0 0 40px purple;
+}
+
+#Front-Title:hover {
+  text-shadow: -1px -1px 0px #1df2f0, 1px 1px 0px #E94BE8;
+}
+
+#Front-Title:hover {
+  background-color: transparent;
+  border: transparent;
+  box-shadow: transparent;
+}
+
+@keyframes glitch_4011 {
+  0% {
+    clip-path: var(--move1);
+    transform: translate(0px, -10px);
+  }
+
+  10% {
+    clip-path: var(--move2);
+    transform: translate(-10px, 10px);
+  }
+
+  20% {
+    clip-path: var(--move3);
+    transform: translate(10px, 0px);
+  }
+
+  30% {
+    clip-path: var(--move4);
+    transform: translate(-10px, 10px);
+  }
+
+  40% {
+    clip-path: var(--move5);
+    transform: translate(10px, -10px);
+  }
+
+  50% {
+    clip-path: var(--move6);
+    transform: translate(-10px, 10px);
+  }
+
+  60% {
+    clip-path: var(--move1);
+    transform: translate(10px, -10px);
+  }
+
+  70% {
+    clip-path: var(--move3);
+    transform: translate(-10px, 10px);
+  }
+
+  80% {
+    clip-path: var(--move2);
+    transform: translate(10px, -10px);
+  }
+
+  90% {
+    clip-path: var(--move4);
+    transform: translate(-10px, 10px);
+  }
+
+  100% {
+    clip-path: var(--move1);
+    transform: translate(0);
+  }
+}*/
+
+.carousel {
+  margin: 0px;
+  width: 7em;
+  height: 50vh;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+  top: 140px;
+  left: 10px;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  padding-bottom: 1em;
+}
+.carousel-card {
+  flex: 0 0 1em;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  padding: 1em;
+  background-color: lightgray;
+  font-size: 2em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.carousel-card img {
+  width: 300%;
+  height: 300%;
+  object-fit: cover;
+}
+.carousel-card:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+.scroll-btn {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+.scroll-up {
+  top: 150px;
+  left: 70px;
+}
+.scroll-down {
+  bottom: 110px;
+  left: 64px;
+}

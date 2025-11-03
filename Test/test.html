@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vertical Image Carousel</title>
+<link rel="stylesheet" href="test.css"> <!-- (optional, if you saved the CSS separately) -->
+</head>
+<body>
+
+<div class="carousel" id="carousel">
+  <!-- Scroll Buttons -->
+  <button class="scroll-btn scroll-up" onclick="scrollCarousel(-1)">▲</button>
+  <div class="group">
+    <div class="card"><img src="https://picsum.photos/100?random=1"></div>
+    <div class="card"><img src="https://picsum.photos/100?random=2"></div>
+    <div class="card"><img src="https://picsum.photos/100?random=3"></div>
+    <div class="card"><img src="https://picsum.photos/100?random=4"></div>
+    <div class="card"><img src="https://picsum.photos/100?random=5"></div>
+    <div class="card"><img src="https://picsum.photos/100?random=6"></div>
+    <div class="card"><img src="https://picsum.photos/100?random=7"></div>
+  </div>
+  <button class="scroll-btn scroll-down" onclick="scrollCarousel(1)">▼</button>
+</div>
+
+<script>
+function scrollCarousel(direction) {
+  const carousel = document.getElementById('carousel');
+  const scrollAmount = 140; // how many pixels to move per click
+  carousel.scrollBy({
+    top: scrollAmount * direction,
+    behavior: 'smooth'
+  });
+}
+</script>
+
+</body>
+</html>
