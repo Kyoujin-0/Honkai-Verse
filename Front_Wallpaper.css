@@ -1,14 +1,38 @@
-html,
-body {
+:root{
+  --accent-color: #ffffff;
+  --text-color: #ffffff;
+  --muted-color: rgba(255,255,255,0.7);
+}
+
+/* Example elements using the accent color */
+.main-title, .subtitle, .carousel-card img { 
+  transition: color .35s, filter .35s; 
+}
+
+.main-title { color: var(--text-color); }
+button, .btn, a { color: var(--accent-color); border-color: var(--accent-color); transition: color .35s, border-color .35s; }
+
+/* if you want buttons to have background of accent color on hover */
+button:hover { background: rgba(255,255,255,0.06); }
+
+/* background-video fade handled by inline style transition, but you can add fallback */
+#background-video { opacity: 1; }
+#background-video.fading { opacity: 0; }
+
+
+html,body {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
   background-position: center;
-  margin: 0;
-  /*background-image: url("");
-    background-color: #232323;*/
+  color: var(--accent-color);
+  transition: background 0.5s, color 0.5s;
   z-index: -2;
+}
+
+button, h1, h2, .highlight {
+  color: var(--accent-color);
 }
 
 #Background-Video {

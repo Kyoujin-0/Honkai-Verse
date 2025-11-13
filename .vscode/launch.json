@@ -8,8 +8,9 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open Front_Wallpaper.html",
-            "file": "c:\\Users\\godyvir\\Game Web\\index.html"
+            "file":"c:\\Users\\godyvir\\Game Web\\index.html"
             //"file": "Test/test.html"
+            //"file":"\\Users\\godyvir\\Game Web\\Test\\Home.html"
         }
     ]
 }
